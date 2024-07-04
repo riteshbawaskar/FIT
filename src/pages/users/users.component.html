@@ -1,0 +1,62 @@
+<div id="users" class="page-layout simple left-sidebar inner-sidebar inner-scroll">
+
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="start"
+         fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16"
+                          [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">account_box
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Users
+                </span>
+            </div>
+
+        </div>
+        <!-- / APP TITLE -->
+
+        <!-- SEARCH -->
+        <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+            <div class="search-wrapper mt-16 mt-sm-0">
+
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <input matInput #userSearchValue [formControl]="searchInput" placeholder="Search for a user">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / SEARCH -->
+
+    </div>
+    <!-- / HEADER -->
+
+
+    <!-- CONTENT -->
+     <!-- CONTENT -->
+     <div class="content" FlexPerfectScrollbar  >
+        <!-- CENTER -->
+        <div  class="center p-24 pb-56 pr-sm-92" >
+            <!-- CONTENT -->
+            <div class="content" >
+                 <app-users-list [userSearchValue]="userSearchValue.value" ></app-users-list> 
+            </div>
+            <!-- / CONTENT -->
+        </div>
+        <!-- / CENTER -->
+    </div>
+    <!-- / CONTENT-->
+</div>
+
+<!-- ADD User BUTTON -->
+<button mat-fab class="accent" id="add-user-button" (click)="newUser()" aria-label="add user"
+        [@animate]="{value:'*', params:{delay:'300ms',scale:'.2'}}">
+    <mat-icon>person_add</mat-icon>
+</button>
+<!-- / ADD User BUTTON -->

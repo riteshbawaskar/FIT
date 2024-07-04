@@ -1,0 +1,17 @@
+
+.fuse-card{
+    padding: 12px;
+    margin: 12px;
+    font-size: 12px;
+
+    .h1{ font-size:18px;}
+    .h4{font-size: 12px;}
+
+    .status {
+        height: 12px;
+        width: 12px;
+        background-color:green;
+        border-radius: 50%;
+        display: inline-block;
+      }
+}

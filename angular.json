@@ -36,10 +36,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+                
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss"            
             ],
             "scripts": []
           },

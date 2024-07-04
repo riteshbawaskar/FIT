@@ -1,0 +1,36 @@
+<mat-tab-group>
+  <mat-tab label="Widgets">
+
+       <mat-divider></mat-divider>
+
+      <mat-divider></mat-divider>
+
+
+  </mat-tab>
+
+  <mat-tab label="Agents">
+      <div class="sidebar" *ngFor="let agent of agents">
+          <div>
+            <div class="fuse-card">
+                      
+              <div class="p-16">
+                  <div class="h1"><span class="status" matTooltip="Online"></span> {{agent.name}}</div>
+                  <div class="h4 secondary-text">{{agent.url}}</div>
+              </div>
+          
+              <div class="p-16 pt-0 line-height-1.75">
+                  {{agent.description}}.
+              </div>
+          
+              <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="start center">
+                  <button mat-button color="accent" (click)="deleteAgent(agent)" >Delete</button>
+              </div>
+          
+          </div>
+      
+
+           </div>
+      </div>
+
+  </mat-tab>
+</mat-tab-group>

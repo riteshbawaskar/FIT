@@ -1,0 +1,65 @@
+<div id="dashboard" class="page-layout simple">
+  <!-- HEADER -->
+  <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="start"
+  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+
+ <!-- APP TITLE -->
+ <div fxLayout="row" fxLayoutAlign="start center">
+
+     <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+       <mat-icon> dashboard
+         </mat-icon>
+         <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+             Welcome, {{user.userId}} !!
+         </span>
+     </div>
+
+ </div>
+ <!-- / APP TITLE -->
+
+</div>
+<!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content p-24 contentpanel" FlexPerfectScrollbar>
+      <div fxLayout="column"  fxLayoutAlign="center" >
+             <div class="courses" fxLayout="row wrap" fxLayoutAlign="center" [@animateStagger]="{ value: '50' }">
+
+              <div class="course" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-sm="33"
+                  [@animate]="{ value: '*', params: { y: '100%' } }">
+                  <div class="course-content" fxLayout="column" fxFlex="1 1 auto">
+                   
+                      <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                          <div class="h1"> 25  </div>
+                          <div class="updated"> TEST SUITES</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="course" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-sm="33"
+                  [@animate]="{ value: '*', params: { y: '100%' } }">
+                  <div class="course-content" fxLayout="column" fxFlex="1 1 auto">
+                   
+                      <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                          <div class="h1"> 250  </div>
+                          <div class="updated"> TEST CASES</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="course" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-sm="33"
+              [@animate]="{ value: '*', params: { y: '100%' } }">
+              <div class="course-content" fxLayout="column" fxFlex="1 1 auto">
+               
+                  <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                      <div class="h1"> 1500  </div>
+                      <div class="updated"> TEST STEPS</div>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+      </div>
+  </div>
+  <!-- / CONTENT -->
+</div>
